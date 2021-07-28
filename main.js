@@ -14,4 +14,4 @@ http.createServer((req, res) => {
 
   // print log
   console.log(`At: ${new Date().toDateString()}, Url: ${url}, Response Code: ${res.statusCode}`);
-}).listen(23334);
+}).listen(23334, () => console.log("Server started at port 23334"));
