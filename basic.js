@@ -13,19 +13,6 @@ function hello(req, res) {
   )));
 }
 
-function jsonRouter(req, res) {
-  let url = req.url, targetFunc;
-
-  if (url === "/") targetFunc = hello;
-
-  if (targetFunc === undefined || targetFunc === null) return false;
-
-  targetFunc(req, res);
-  return true;
-
-}
-
 module.exports = {
   hello,
-  jsonRouter,
 }
